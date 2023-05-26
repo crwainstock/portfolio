@@ -8,25 +8,41 @@ export default function NavBar() {
         <nav className="flex">
           <NavLink
             to="/"
-            className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            className={({ isActive, isPending }) =>
+              isActive
+                ? "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6 text-yellow-400"
+                : "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            }
           >
             Home
           </NavLink>
           <NavLink
             to="/projects"
-            className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            className={({ isActive, isPending }) =>
+              isActive
+                ? "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6 text-yellow-400"
+                : "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            }
           >
             Projects
           </NavLink>
           <NavLink
             to="/blog"
-            className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            className={({ isActive, isPending }) =>
+              isActive
+                ? "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6 text-yellow-400"
+                : "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            }
           >
             Blog
           </NavLink>
           <NavLink
             to="/about"
-            className="border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            className={({ isActive, isPending }) =>
+              isActive
+                ? "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6 text-yellow-400"
+                : "border-b-2 border-transparent hover:text-gray-800 dark:hover:text-gray-200 hover:border-red-400 mx-1.5 sm:mx-6"
+            }
           >
             About
           </NavLink>
