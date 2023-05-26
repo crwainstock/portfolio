@@ -6,3 +6,7 @@ html,
 body {
   font-family: "Noto Sans", sans-serif;
 }
+
+.cursive {
+  font-family: "Amatic SC", cursive;
+}
