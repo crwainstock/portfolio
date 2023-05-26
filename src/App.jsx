@@ -16,8 +16,8 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path="about" element={<About />} />
+      <Route index element={<Home />} errorElement={<Error />} />
+      <Route path="about" element={<About />} errorElement={<Error />} />
       <Route path="blog" element={<Blog />} errorElement={<Error />} />
       <Route path="projects" element={<Projects />} errorElement={<Error />} />
       <Route path="*" element={<NotFound />} />
