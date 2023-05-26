@@ -5,6 +5,7 @@ import Blog from "./pages/BlogPosts";
 import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
 import {
   createBrowserRouter,
   createRoutesFromElements,
