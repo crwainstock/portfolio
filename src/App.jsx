@@ -20,7 +20,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <div></div>;
+  return <RouterProvider router={router} />;
 }
 
-export default App;
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
