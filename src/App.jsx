@@ -12,6 +12,7 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import SinglePost from "./pages/SinglePost";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,13 +20,18 @@ const router = createBrowserRouter(
       <Route index element={<Home />} errorElement={<Error />} />
       <Route path="about" element={<About />} errorElement={<Error />} />
       <Route path="blog" element={<Blog />} errorElement={<Error />} />
+      <Route
+        path="singlePost"
+        element={<SinglePost />}
+        errorElement={<Error />}
+      />
       <Route path="projects" element={<Projects />} errorElement={<Error />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
 
-function App() {
+export default function App() {
   return <RouterProvider router={router} />;
 }
 
