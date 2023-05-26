@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -7,7 +8,22 @@ export default function Footer() {
       <div className="flex p-4">
         <h4>©Crystal Rose-Wainstock</h4>
       </div>
-      <div className="flex p-4">social icon</div>
+      <div className="flex p-4">
+        <Link
+          to={{ pathname: "https://www.linkedin.com/in/crwainstock/" }}
+          target="_blank"
+        >
+          <BsLinkedin />
+        </Link>
+      </div>
+      <div className="flex p-4">
+        <Link
+          to={{ pathname: "https://github.com/crwainstock" }}
+          target="_blank"
+        >
+          <BsGithub />
+        </Link>
+      </div>
     </nav>
   );
 }
