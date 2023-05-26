@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./App.css";
+import ReactDOM from "react-dom/client";
 
 import {
   createBrowserRouter,
@@ -7,6 +6,18 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="blog" element={<BlogPosts />} errorElement={<Error />} />
+      <Route path="projects" element={<Projects />} errorElement={<Error />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 function App() {
   return <div></div>;
