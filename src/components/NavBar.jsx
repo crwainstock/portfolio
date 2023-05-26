@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <header className="text-blue-600">
+    <header className="bg-slate-300">
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/projects">Projects</NavLink>
