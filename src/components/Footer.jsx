@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
@@ -9,20 +9,19 @@ export default function Footer() {
         <h4>©Crystal Rose-Wainstock</h4>
       </div>
       <div className="flex p-4">
-        <Link
-          to={{ pathname: "https://www.linkedin.com/in/crwainstock/" }}
-          target="_blank"
-        >
+        <a href="https://www.linkedin.com/in/crwainstock/" target="_blank">
           <BsLinkedin />
-        </Link>
+        </a>
       </div>
       <div className="flex p-4">
-        <Link
-          to={{ pathname: "https://github.com/crwainstock" }}
-          target="_blank"
-        >
+        <a href="https://github.com/crwainstock" target="_blank">
           <BsGithub />
-        </Link>
+        </a>
+      </div>
+      <div className="flex p-4">
+        <a href="https://twitter.com/crwainstock" target="_blank">
+          <BsTwitter />
+        </a>
       </div>
     </nav>
   );
