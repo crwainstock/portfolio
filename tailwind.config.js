@@ -8,5 +8,3 @@ export default {
   },
   plugins: [require("@tailwindcss/typography")],
 };
-
-// Having trouble getting tailwind to render -- showing up in elements in Browser, but not in render
