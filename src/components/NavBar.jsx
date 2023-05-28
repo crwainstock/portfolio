@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
-    <header className="bg-white shadow dark:bg-gray-800">
+    <header className="bg-white shadow dark:bg-gray-800 navbar-fixed">
       <div className="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
         <nav className="flex">
           <NavLink
