@@ -3,9 +3,18 @@ import { SanityClient } from "@sanity/client";
 // dotenv.config();
 // import express from "express";
 
-const client = new SanityClient({
+import { createClient } from "@sanity/client";
+
+const client = createClient({
   projectId: "6n6s9lrw",
   dataset: "production",
+  useCdn: false, // set to `false` to bypass the edge cache
+  apiVersion: "2023-05-03", // use current date (YYYY-MM-DD) to target the latest API version
 });
+
+// const client = new SanityClient({
+//   projectId: "6n6s9lrw",
+//   dataset: "production",
+// });
 
 export default client;
