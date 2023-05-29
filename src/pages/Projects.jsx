@@ -20,10 +20,26 @@ export default function Projects() {
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
+  console.log(projectData);
 
   return (
-    <div>
-      <h3>This is the project page</h3>
-    </div>
+    <main>
+      <section>
+        <h1></h1>
+        <h2></h2>
+        <section>
+          <article>
+            <h3></h3>
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <p></p>
+              <span></span>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
   );
 }
