@@ -2,7 +2,7 @@ export default {
   name: 'project',
   title: 'Project',
   type: 'document',
-  field: [
+  fields: [
     {
       name: 'title',
       type: 'string',
@@ -29,6 +29,22 @@ export default {
           {value: 'client', title: 'Client'},
           {value: 'school', title: 'School'},
         ],
+      },
+    },
+    {
+      name: 'link',
+      type: 'url',
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
       },
     },
   ],
