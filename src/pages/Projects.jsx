@@ -23,7 +23,7 @@ export default function Projects() {
   console.log(projectData);
 
   return (
-    <main className="min-h-screen p-12 mb-12">
+    <main className="min-h-screen p-12 mb-12 bg-stone-100">
       <section className="container mx-auto pt-14">
         <h1 className="text-5xl flex justify-center pb-5">My Projects</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
@@ -59,7 +59,7 @@ export default function Projects() {
                     href={project.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="text-red-400 font-bold hover:underline hover:text-red-300 hover:cursor-pointer"
+                    className="text-red-400 text-xl font-bold hover:underline hover:text-red-300 hover:cursor-pointer"
                   >
                     View The Project{" "}
                     <span role="img" aria-label="right pointer">

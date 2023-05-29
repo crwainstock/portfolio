@@ -26,7 +26,7 @@ export default function BlogPosts() {
   console.log(postData);
 
   return (
-    <main className="min-h-screen p-12">
+    <main className="min-h-screen p-12 bg-stone-100">
       <section className="container mx-auto pt-14">
         <h1 className="text-5xl flex justify-center pb-5">Journal</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
