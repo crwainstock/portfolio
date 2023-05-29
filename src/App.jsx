@@ -21,8 +21,9 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} errorElement={<Error />} />
       <Route path="blog" element={<Blog />} errorElement={<Error />} />
       <Route
-        path="singlePost"
+        path="singlePost/:slug"
         element={<SinglePost />}
+        //This element not rendering properly. Something not working with fetch, I think.
         errorElement={<Error />}
       />
       <Route path="projects" element={<Projects />} errorElement={<Error />} />

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLoaderData, defer, Await } from "react-router-dom";
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
-import BlockContent from "@sanity/block-content-to-react";
+import { PortableText } from "@portabletext/react";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -11,29 +11,32 @@ function urlFor(source) {
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState(null);
+  // const dataPromise = useLoaderData();
   const { slug } = useParams();
 
   useEffect(() => {
     sanityClient
       .fetch(
         `*[slug.current == "${slug}"]{
-      title,
-      _id,
-      slug,
-      mainImage{
-        asset->{
-          _id,
-          url
-        }
-      },
-      body,
-      "authorName": author->name,
-      "authorImage": author->image
-    }`
+    title,
+    _id,
+    slug,
+    mainImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    body,
+    "authorName": author->name,
+    "authorImage": author->image
+  }`
       )
       .then((data) => setSinglePost(data[0]))
       .catch(console.error);
   }, [slug]);
+
+  // console.log(slug); Nothing. Not even attempting to console.log
 
   console.log(singlePost);
 
@@ -66,13 +69,15 @@ export default function SinglePost() {
           />
         </header>
         <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
-          <BlockContent
-            blocks={singlePost.body}
-            projectId="6n6s9lrw"
-            dataset="production"
+          <PortableText
+            value={singlePost.body}
+            // projectId="6n6s9lrw"
+            // dataset="production"
           />
         </div>
       </article>
     </main>
   );
 }
+
+//Block content is no longer standard. Use PortableText instead -- directions for migration online
