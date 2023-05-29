@@ -32,7 +32,10 @@ export default function Projects() {
         <section className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-16">
+              <article
+                className="relative rounded-lg shadow-xl bg-white p-16"
+                key={project.title}
+              >
                 <h3 className="text-gray-800 text-3xl font-bold mg-2 hover:text-red-500 hover:cursor-pointer">
                   <a
                     href={project.link}
