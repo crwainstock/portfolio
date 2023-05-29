@@ -12,10 +12,6 @@ export default {
       type: 'datetime',
     },
     {
-      name: 'place',
-      type: 'string',
-    },
-    {
       name: 'description',
       type: 'text',
     },
@@ -24,7 +20,7 @@ export default {
       title: 'Project Type',
       type: 'string',
       options: {
-        lists: [
+        list: [
           {value: 'personal', title: 'Personal'},
           {value: 'client', title: 'Client'},
           {value: 'school', title: 'School'},
