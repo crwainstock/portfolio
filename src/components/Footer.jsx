@@ -4,7 +4,7 @@ import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <nav className="container inline-flex justify-center items-center fixed bottom-0 p-4">
+    <nav className="container inline-flex justify-center items-center bottom-0 p-4">
       <div className="flex p-4">
         <h4>©Crystal Rose-Wainstock</h4>
       </div>
