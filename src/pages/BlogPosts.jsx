@@ -23,18 +23,19 @@ export default function BlogPosts() {
       .then((data) => setPostData(data))
       .catch(console.error);
   }, []);
+  console.log(postData);
 
   return (
     <main className="bg-green-100 min-h-screen p-12">
       <section className="container mx-auto pt-14">
-        <h1 className="text-5xl flex justify-center">Journal</h1>
+        <h1 className="text-5xl flex justify-center pb-5">Journal</h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Thoughts about coding & learning new things.
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {postData &&
             postData.map((post, index) => (
-              <article>
+              <article key={post.slug.current}>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
                     className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400"
@@ -46,7 +47,7 @@ export default function BlogPosts() {
                       className="w-full h-full rounded-r object-cover absolute"
                     />
                     <span className="relative h-full flex justify-end items-end pr-4 pb-4">
-                      <h3 className="text-gray-800 text-lg font-bold px-3 py-4 bg-red-700 bg-opacity-75 rounded">
+                      <h3 className="text-gray-800 text-lg font-bold px-3 py-4 bg-yellow-500 bg-opacity-75 rounded">
                         {post.title}
                       </h3>
                     </span>
@@ -59,3 +60,5 @@ export default function BlogPosts() {
     </main>
   );
 }
+
+//npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
