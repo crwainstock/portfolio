@@ -29,7 +29,7 @@ export default function About() {
 
   return (
     <main className="relative">
-      <div className="p-10 lg:pt-48 container mx-auto relative bg-stone-200">
+      <div className="p-10 lg:pt-40 container mx-auto relative bg-stone-200">
         <section className="bg-stone-400 rounded-lg shadow-2xl lg:flex p-20">
           <img
             src={urlFor(author.authorImage).url()}
@@ -37,8 +37,8 @@ export default function About() {
             alt="author image"
           />
           <div className="text-lg flex flex-col justify-center">
-            <h1 className="text-6xl mb-4">
-              Hey! I'm <span className="text-white">{author.name}</span>
+            <h1 className="text-6xl mb-4 text-white">
+              Hey! I'm <span className="text-yellow-400">{author.name}</span>
             </h1>
             <div className="prose lg:prose-xl text-white">
               <PortableText
