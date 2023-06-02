@@ -11,11 +11,13 @@ export default function Home() {
         alt="white building walls intersecting"
         className="absolute object-cover h-full w-full"
       />
-      <section className="relative justify-center items-center flex min-h-screen lg:pt-10rem px-8">
-        <h1 className="text-yellow-400 text-6xl flex-row font-bold leading-none lg:leading-snug sm:text-2xl home-name content-center">
+      <section className="relative justify-center items-center flex-col min-h-screen lg:pt-10rem px-8 pt-10">
+        <h1 className="text-yellow-400 text-6xl flex-row font-bold leading-none lg:leading-snug sm:text-2xl home-name content-center justify-center pt-10 mt-10">
           Hi, I'm Crystal.
         </h1>
-        <h4 className="flex-row">Full Stack Developer</h4>
+        <h4 className="flex-row content-center justify-center">
+          Full Stack Developer
+        </h4>
       </section>
     </main>
   );

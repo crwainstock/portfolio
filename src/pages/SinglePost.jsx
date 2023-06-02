@@ -44,7 +44,7 @@ export default function SinglePost() {
 
   return (
     <main className="bg-gray-200 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-stone-200 rounded-lg">
+      <article className="container shadow-lg mx-auto bg-stone-100 rounded-lg">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             <div className="bg-white bg-opacity-75 rounded p-12">
@@ -55,7 +55,7 @@ export default function SinglePost() {
                   alt={singlePost.authorName}
                   className="w-10 h-10 rounded-full"
                 />
-                <p className="flex items-center pl-2 text-2xl">
+                <p className="flex items-center pl-2 text-xl">
                   {singlePost.authorName}
                 </p>
               </div>
