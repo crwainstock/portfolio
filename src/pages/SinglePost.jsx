@@ -68,7 +68,7 @@ export default function SinglePost() {
             style={{ height: "400px" }}
           />
         </header>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full sm:px-2">
           <PortableText
             value={singlePost.body}
             // projectId="6n6s9lrw"
@@ -81,3 +81,4 @@ export default function SinglePost() {
 }
 
 //Block content is no longer standard. Use PortableText instead -- directions for migration online
+// npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
