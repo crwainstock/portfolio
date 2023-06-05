@@ -3,6 +3,7 @@ export default {
   // content: ["./pages/**/*.{html,js}", "./components/**/*.{html,js}"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   // content: ["./src/**/*.{html,js}"],
+  safelist: [],
   theme: {
     extend: {},
   },
